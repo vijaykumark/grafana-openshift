@@ -7,6 +7,7 @@ if [ ! -z "${GF_INSTALL_PLUGINS}" ]; then
   done
   IFS=$OLDIFS
 fi
+grafana-cli --pluginsDir /usr/share/grafana/data/plugins plugins install hawkular-datasource
 source /etc/sysconfig/grafana-server
 cd /usr/share/grafana
 /usr/sbin/grafana-server \
